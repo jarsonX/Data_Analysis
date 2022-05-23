@@ -1,4 +1,4 @@
-# Preprocessing of data and basic analysis.
+# Preprocessing of data and basic analysis
 
 # Data includes EUR/USD rates.
 
@@ -23,7 +23,7 @@ import pandas as pd
 from datetime import date
 
 # (1) LOAD DATA
-input_file = r'C:\Users\krzys\Desktop\UE\4. Preprocessing danych rzeczywistych\Projekt\EURUSD_H4.csv'
+input_file = r'C:\Users\...\EURUSD_H4.csv'
 data = pd.read_csv(input_file)
 
 # (2) CLEANING
@@ -78,7 +78,7 @@ data['CCI'].plot()
 
 # (5) SUMMARY
 
-summary = open(r'C:\Users\krzys\Desktop\UE\4. Preprocessing danych rzeczywistych\Projekt\Summary.txt', 'w')
+summary = open(r'C:\Users\...\Summary.txt', 'w')
  
 summary.write("File name: " + input_file[input_file.rfind('''\\''')+1:] + "\n")
 summary.write("Created: " + str(date.today()) + "\n"*2)
@@ -91,6 +91,6 @@ summary.write('Correlation of Close value and SMA14 equals ' + str(round(float(c
               
 summary.close()
 
-data.to_csv(r'C:\Users\krzys\Desktop\UE\4. Preprocessing danych rzeczywistych\Projekt\EURUSD_H4_out.cs')
+data.to_csv(r'C:\Users\...\EURUSD_H4_out.cs')
 
 print("Done!")
