@@ -72,7 +72,6 @@ mean_II_coll_1 = round(df[df['Group'] == 'II']['Colloquium_1'].mean(),2)
 print('Colloquium 1 mean for Group I:', '\t'*5, mean_I_coll_1)
 print('Colloquium 1 mean for Group II:', '\t'*5, mean_II_coll_1)
 
-# What was the median for grades in group 2?
 grades_in_II = df[df['Group'] == 'II']['Colloquium_1'].append(df[df['Group'] == 'II']['Colloquium_2']).append(df[df['Group'] == 'II']['Project'])
 print('Median for grades in Group II:', '\t'*5, grades_in_II.median())
 
