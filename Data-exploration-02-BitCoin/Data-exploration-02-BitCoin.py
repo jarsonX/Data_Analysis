@@ -1,6 +1,6 @@
 #Get data for Bitcoin/USD for last 30 days
-#Save data to csv file.
-#Create candlestick graph.
+#Save data to csv file
+#Create candlestick graph
 
 #API: CoinGecko, https://www.coingecko.com/
 #Wrapper: PyCoinGecko, https://github.com/man-c/pycoingecko
