@@ -91,6 +91,6 @@ summary.write('Correlation of Close value and SMA14 equals ' + str(round(float(c
               
 summary.close()
 
-data.to_csv(r'C:\Users\...\EURUSD_H4_out.cs')
+data.to_csv(r'C:\Users\...\EURUSD_H4_out.csv')
 
 print("Done!")
