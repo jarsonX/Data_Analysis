@@ -14,7 +14,7 @@ data  = requests.get(url).text
 soup = BeautifulSoup(data,"html.parser")
 
 #Save data
-write_file = open(r"C:\Users\krzys\Desktop\scrap_01.txt", 'w')
+write_file = open(r"C:\...\scrap_01.txt", 'w')
 
 print("Links", file=write_file)
 for link in soup.find_all('a',href=True):
