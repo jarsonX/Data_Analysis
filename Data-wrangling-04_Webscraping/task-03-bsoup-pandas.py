@@ -75,7 +75,8 @@ print("\n")
 
 #(3) read_html to get DataFrame directly from url
 ##############################################################################
-#We load all tables as DataFrames and pick the one that we need.
+#We load all tables as DataFrames and pick the one that we need or load only
+#the one we need using match (which is recommended).
 
 print("(3) read_html to get DataFrame directly from url")
 print('---------------------------------------------------')
