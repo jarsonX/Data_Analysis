@@ -1,5 +1,5 @@
 #File 'top500' contains names and gross revenues of 500 films.
-#Those films need to be sorted in order from greates gross revenue to least.
+#Those films need to be sorted based on revenues in descending order.
 
 import csv
 
@@ -23,10 +23,4 @@ def sort_films(input_file, output_file):
         for movie in movie_list_sorted:
             print(movie[1], '\t', movie[0], file=out)
   
-sort_films(r"C:\Users\krzys\Desktop\top500.txt", r"C:\Users\krzys\Desktop\top500result.txt")
-
-
-
-
-
-
+sort_films('...\top500.txt', '...\top500result.txt')
