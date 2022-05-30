@@ -2,6 +2,7 @@
 #Those films need to be sorted based on revenues in descending order.
 
 import csv
+#This can be done without csv module but it will be easier that way.
 
 def sort_films(input_file, output_file):
     
