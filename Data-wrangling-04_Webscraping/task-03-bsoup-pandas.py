@@ -15,7 +15,7 @@ from bs4 import BeautifulSoup
 url = "https://en.wikipedia.org/wiki/World_population"
 data = requests.get(url).text
 
-soup = BeautifulSoup(data,"html.parser")
+soup = BeautifulSoup(data,"html.parser")  #'html.parser' or 'html5lib'
 
 #Identify the correct table
 tables = soup.find_all('table')  #finds all <table> tags
