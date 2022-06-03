@@ -40,7 +40,7 @@ print("Index of the correct table:", table_index,"\n")
 #Create a DataFrame, then fill it wih a for loop
 population_data = pd.DataFrame(columns=["Rank", "Country", "Population", "Area", "Density"])
 
-for row in tables[table_index].tbody.find_all("tr"):
+for row in tables[table_index]('tbody').find_all("tr"):
     col = row.find_all("td")
     if (col != []):
         rank = col[0].text
@@ -52,6 +52,28 @@ for row in tables[table_index].tbody.find_all("tr"):
 
 print(population_data)
 print("\n")
+
+#Other example where there is ONLY ONE table:
+for row in soup.find("tbody").find_all('tr'):
+    col = row.find_all("td")
+    date = col[0].text
+    Open = col[1].text
+    high = col[2].text
+    low = col[3].text
+    close = col[4].text
+    adj_close = col[5].text
+    volume = col[6].text
+    population_data = population_data.append({"Rank":rank, "Country":country, "Population":population, "Area":area, "Density":density}, ignore_index=True)
+
+#Other example where there are multiple tables and we need [1]:
+data = pd.DataFrame(columns=["Date","Revenue"])
+
+for row in soup.find_all("tbody")[1].find_all("tr"):
+    col = row.find_all("td")
+    date = col[0].text
+    revenue = col[1].text
+    
+    data = data.append({"Date":date, "Revenue":revenue},ignore_index=True)
 
 #(2) BeautifulSoup and read_html (from Pandas)
 ##############################################################################
