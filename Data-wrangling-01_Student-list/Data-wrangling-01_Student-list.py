@@ -53,7 +53,7 @@ for i in range(num_of_students):
     else:
         list_group.append('II')
         
-# df = pd.DataFrame(list_names)  # df = DataFrame
+# df = pd.DataFrame(list_names)
 # df.set_axis(['Name'], axis=1, inplace=True)
 # df['Album'] = list_album
 # df['Group'] = list_group
@@ -61,15 +61,17 @@ for i in range(num_of_students):
 # df['Colloquium_2'] = list_coll_2
 # df['Project'] = list_project
 
-df = pd.DataFrame()  # df = DataFrame
+#Alternatively, which is more readable for me:
+df = pd.DataFrame()
 df['Name'] = list_names
 df['Album'] = list_album
 df['Group'] = list_group
 df['Colloquium_1'] = list_coll_1
 df['Colloquium_2'] = list_coll_2
 df['Project'] = list_project
+
+#Averages is needed later on to calcualte correlation so it can be added to df right away.
 df['Average'] = df.apply(lambda row : round(((row[3]+row[4]+row[5])/3),1), axis=1)
-#averages is needed to calcualte correlation so it can be added to df right away
 
 print(df)
 
