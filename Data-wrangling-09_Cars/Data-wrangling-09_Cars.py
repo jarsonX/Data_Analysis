@@ -30,7 +30,7 @@ for column in missing_data.columns.values.tolist():
     print (missing_data[column].value_counts())
     print("")    
 
-#Replace by mean: normalized-losses, stroke, bore, horsepower, peak-rpm
+#Replace by mean: normalized-losses, bore, stroke, horsepower, peak-rpm
 avg_norm_loss = df["normalized-losses"].astype("float").mean(axis=0)
 df["normalized-losses"].replace(np.nan, avg_norm_loss, inplace=True)
 
@@ -47,7 +47,7 @@ avg_peakrpm=df['peak-rpm'].astype('float').mean(axis=0)
 df['peak-rpm'].replace(np.nan, avg_peakrpm, inplace=True)
 
 #Replace by frequency: num-of-doors
-replacer = df['num-of-doors'].value_counts().idxmax()
+replacer = df['num-of-doors'].value_counts().idxmax()  #idxmax calculates the most common type
 df["num-of-doors"].replace(np.nan, replacer, inplace=True)
 
 #Drop: price, since price is our predictor missing values are useless
@@ -71,6 +71,7 @@ df[["peak-rpm"]] = df[["peak-rpm"]].astype("float")
 
 df["highway-mpg"] = 235/df["highway-mpg"]
 df.rename(columns={'highway-mpg':'highway-L/100km'}, inplace=True)
+
 df["city-mpg"] = 235/df["city-mpg"]
 df.rename(columns={'city-mpg':'city-L/100km'}, inplace=True)
 
