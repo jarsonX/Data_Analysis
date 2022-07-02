@@ -1,11 +1,10 @@
+#Scenario: prepare dataset for price prediction ML. Dataset contains data about cars.
+#Dataset: https://archive.ics.uci.edu/ml/machine-learning-databases/autos/imports-85.data.
+
 import pandas as pd
 import numpy as np
 import matplotlib as plt
 from matplotlib import pyplot
-
-#Scenario: prepare dataset for price prediction ML. Dataset contains data about cars.
-#Dataset: https://archive.ics.uci.edu/ml/machine-learning-databases/autos/imports-85.data.
-
 
 #Load__________________________________________________________________________
 
