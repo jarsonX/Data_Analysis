@@ -50,7 +50,7 @@ IQR = Q3 - Q1
 extremum = []  #check highest and lowest values in search for outliers
 
 for el in data['CCI']:
-    if (el < (Q1 - 2 * IQR)) or (el > (Q3 + 2 * IQR)):
+    if (el < (Q1 - 1.5 * IQR)) or (el > (Q3 + 1.5 * IQR)):
         extremum.append(el)
         
 extremum = sorted(extremum)
